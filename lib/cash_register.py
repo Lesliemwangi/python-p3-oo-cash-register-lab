@@ -1,5 +1,4 @@
 def reset_last_transaction(func):
-    """Decorator to reset the last transaction amount after the method call."""
 
     def wrapper(self, *args, **kwargs):
         result = func(self, *args, **kwargs)
@@ -9,7 +8,6 @@ def reset_last_transaction(func):
 
 
 def validate_discount(func):
-    """Decorator to check if the discount can be applied."""
 
     def wrapper(self, *args, **kwargs):
         if self.discount <= 0:
